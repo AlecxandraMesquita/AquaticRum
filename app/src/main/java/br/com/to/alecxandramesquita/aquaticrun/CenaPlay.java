@@ -46,10 +46,9 @@ public class CenaPlay extends AGScene {
         //Instancia a musica do jogo
         AGSoundManager.vrMusic.loadMusic("jogando.wav", true);
         AGSoundManager.vrMusic.play();
-        // imagemBarril = this.createSprite(R.mipmap.barril,1,1);
        //instancia o tempo que irá gera os berris
         tempoGeraBarril = new AGTimer(1500);
-        tempobarril = new AGTimer(5000);
+        tempobarril = new AGTimer(4000);
         //instancia uma lista de barris para o AGSprite
         listaBarril = new ArrayList<AGSprite>();
 
@@ -57,13 +56,12 @@ public class CenaPlay extends AGScene {
         imagemAgua.setScreenPercent(100, 100);
         imagemBarco.setScreenPercent(10, 10);
         imagemPrincesa.setScreenPercent(10, 12);
-        // imagemBarril.setScreenPercent(20,10);
 
         //pega imagem e a posiciona na tela
         imagemAgua.vrPosition.setXY(AGScreenManager.iScreenWidth / 2, AGScreenManager.iScreenHeight / 2);
         imagemBarco.vrPosition.setXY(AGScreenManager.iScreenWidth / 2, imagemBarco.vrPosition.getY() + 180);
         imagemPrincesa.vrPosition.setXY(AGScreenManager.iScreenWidth / 2, imagemPrincesa.vrPosition.getY() + 1800);
-        // imagemBarril.vrPosition.setXY(AGScreenManager.iScreenWidth/2,AGScreenManager.iScreenHeight/2);
+
     }
 
     @Override
